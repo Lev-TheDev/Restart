@@ -34,7 +34,5 @@ public class ProgramA61 {
 		public static void showResult(int value) {
 			System.out.println("Higher = " + value);
 		}
-		
-		// udemy login q8w3NB24!
 
 }
