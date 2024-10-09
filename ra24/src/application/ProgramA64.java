@@ -26,29 +26,14 @@ public class ProgramA64 {
 		y.b = sc.nextDouble();
 		y.c = sc.nextDouble();
 		
-		double ax = xarea(x.a, x.b, x.c);
-		double ay = yarea(y.a, y.b, y.c);
+		double areaX = x.area();
+		double areaY = y.area();
 		
-		System.out.printf("Triangle X area: %.4f%n", ax);
-		System.out.printf("Triangle Y area: %.4f%n", ay);
-		
-		System.out.println("Larger area: " + larger_area(ax, ay));
+		System.out.printf("Triangle X area: %.4f%n", areaX);
+		System.out.printf("Triangle Y area: %.4f%n", areaY);
+		System.out.println("Larger area: " + larger_area(areaX, areaY));
 		
 		sc.close();
-	}
-	
-	public static double xarea(double xa, double xb, double xc) {
-		double p = (xa + xb + xc)/2;
-		double area = Math.sqrt(p*(p-xa)*(p-xb)*(p-xc));
-		
-		return area;
-	}
-	
-	public static double yarea(double ya, double yb, double yc) {
-		double p = (ya + yb + yc)/2;
-		double area = Math.sqrt(p*(p-ya)*(p-yb)*(p-yc));
-		
-		return area;
 	}
 	
 	public static String larger_area(double xarea, double yarea) {
