@@ -20,6 +20,11 @@ public class ProgramA67 {
 		
 		Product p = new Product(name, price);
 		
+		p.setName("Computer");
+		System.out.println("Updated name: " + p.getName());
+		p.setPrice(1200.00);
+		System.out.println("Updated price: " + p.getPrice());
+		
 		System.out.println();
 		System.out.println("Product data: " + p.toString());
 		

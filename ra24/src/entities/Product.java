@@ -2,11 +2,9 @@ package entities;
 
 public class Product {
 	
-	public String name;
-	public double price;
-	public int quantity;
-	
-	
+	private String name;
+	private double price;
+	private int quantity;
 	
 	public Product() {
 	}
@@ -41,10 +39,8 @@ public class Product {
 	public int getQuantity() {
 		return quantity;
 	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+	
+	// não criar setQuantity para proteger de alterar o valor sem ser pelo add ou remove.
 
 	public double totalValueInStock() {
 		double total = price * quantity;
