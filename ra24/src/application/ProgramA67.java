@@ -17,13 +17,11 @@ public class ProgramA67 {
 		String name = sc.nextLine();
 		System.out.print("Price: ");
 		double price = sc.nextDouble();
-		System.out.print("Quantity in stock: ");
-		int quantity = sc.nextInt();
 		
-		Product p = new Product(name, price, quantity);
+		Product p = new Product(name, price);
 		
 		System.out.println();
-		System.out.println("Product data: " + p.toString() + ", Total: $ " + p.totalValueInStock());
+		System.out.println("Product data: " + p.toString());
 		
 		System.out.println();
 		System.out.print("Enter the amount of products to be added in stock: ");
@@ -31,7 +29,7 @@ public class ProgramA67 {
 		p.addProducts(added);
 		
 		System.out.println();
-		System.out.println("Updated data: " + p.toString() + ", Total: $ " + p.totalValueInStock());
+		System.out.println("Updated data: " + p.toString());
 		
 		System.out.println();
 		System.out.print("Enter the amount of products to be removed from stock: ");
