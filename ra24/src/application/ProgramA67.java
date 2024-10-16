@@ -12,14 +12,15 @@ public class ProgramA67 {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter product data: ");
-		Product p = new Product();
-		
+	
 		System.out.print("Name: ");
-		p.name = sc.nextLine();
+		String name = sc.nextLine();
 		System.out.print("Price: ");
-		p.price = sc.nextDouble();
+		double price = sc.nextDouble();
 		System.out.print("Quantity in stock: ");
-		p.quantity = sc.nextInt();
+		int quantity = sc.nextInt();
+		
+		Product p = new Product(name, price, quantity);
 		
 		System.out.println();
 		System.out.println("Product data: " + p.toString() + ", Total: $ " + p.totalValueInStock());
