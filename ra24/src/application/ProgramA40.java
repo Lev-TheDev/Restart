@@ -13,6 +13,8 @@ public class ProgramA40 {
 			desconto = preco * 0.05;
 		}
 		
+		System.out.println(desconto);
+		
 		// ou
 		
 		/*
