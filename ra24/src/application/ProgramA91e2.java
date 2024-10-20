@@ -30,7 +30,7 @@ public class ProgramA91e2 {
 			sumH += vect[i].getHeight();
 		}
 		double avg = sumH / vect.length;
-		System.out.printf("Altura média: %.2f%n", avg);
+		System.out.printf("\nAltura média: %.2f%n", avg);
 		
 		double med = 0.0;
 		for(int i=0; i<vect.length; i++) {
