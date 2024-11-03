@@ -1,9 +1,12 @@
 package application;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
 public class ProgramA111 {
@@ -43,6 +46,30 @@ public class ProgramA111 {
 		
 		LocalDate d11 = LocalDate.of(2022, 7, 20);
 		System.out.println("d11 = " + d11);
+		
+		LocalDate r1 = LocalDate.ofInstant(d07, ZoneId.systemDefault());
+		System.out.println("R1 = " + r1);
+		
+		LocalDateTime r3 = LocalDateTime.ofInstant(d07, ZoneId.of("Portugal"));
+		System.out.println("R3 = " + r3);
+		
+		System.out.println("d04 dia = " + d04.getDayOfMonth());
+		System.out.println("d04 mês = " + d04.getMonthValue());
+		
+		LocalDate pastWeekLD = d04.minusDays(7);
+		System.out.println("Past week: " + pastWeekLD);
+		
+		LocalDateTime pastWeekLDT = d05.minusDays(7);
+		System.out.println("Past week LDT: " + pastWeekLDT);
+		
+		Instant pastWeekI = d06.minus(7, ChronoUnit.DAYS);
+		System.out.println("Past week instant: " + pastWeekI);
+		
+		Duration t1 = Duration.between(pastWeekLDT, d05);
+		System.out.println("Duration (days) between past week LDT and d05: " + t1.toDays());
+		// duration considera os minutos para calcular, então precisa converter LocalDate em LocalDateTime
+		Duration t2 = Duration.between(pastWeekLD.atTime(0, 0), d04.atStartOfDay());
+		System.out.println("Duration (days) between past week LD and d04: " + t2.toDays());
 		
 		
 		
