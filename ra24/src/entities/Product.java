@@ -43,8 +43,7 @@ public class Product {
 	// não criar setQuantity para proteger de alterar o valor sem ser pelo add ou remove.
 
 	public double totalValueInStock() {
-		double total = price * quantity;
-		return total;
+		return price * quantity;
 	}
 	
 	public void addProducts(int quantity) {
