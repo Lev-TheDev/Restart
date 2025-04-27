@@ -14,7 +14,7 @@ public class ProgramA70e1 {
 		Employee e = new Employee();
 		
 		System.out.print("Name: ");
-		e.name = sc.nextLine();
+		e.setName(sc.nextLine());
 		System.out.print("Gross salary: ");
 		e.grossSalary = sc.nextDouble();
 		System.out.print("Tax: ");

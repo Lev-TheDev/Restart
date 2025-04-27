@@ -1,13 +1,13 @@
 package entities;
 
-public class Product126 {
+public class Product126 implements Comparable<Product126> {
 	private String name;
-	private double price;
+	private Double price;
 	
 	public Product126() {
 	}
 
-	public Product126(String name, double price) {
+	public Product126(String name, Double price) {
 		this.name = name;
 		this.price = price;
 	}
@@ -20,11 +20,23 @@ public class Product126 {
 		this.name = name;
 	}
 
-	public double getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
+
+	@Override
+	public String toString() {
+		return name + " = " + String.format("%.2f", price);
+	}
+
+	@Override
+	public int compareTo(Product126 o) {
+		return price.compareTo(o.getPrice());
+	}
+	
+	
 }
